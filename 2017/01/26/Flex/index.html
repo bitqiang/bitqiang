@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Flexbox 属性 | 强子</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Flexbox 属性FLexbox 是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。开始使用给父元素设置一个　display:flex
+
+FLex 容器：父元素设置了display:flex
+Flex项目：Flex容器内的子元素
+
+FLex容器属性flex-direction || flex-wrap || flex-flow || just">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flexbox 属性">
+<meta property="og:url" content="http://yoursite.com/2017/01/26/Flex/index.html">
+<meta property="og:site_name" content="强子">
+<meta property="og:description" content="Flexbox 属性FLexbox 是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。开始使用给父元素设置一个　display:flex
+
+FLex 容器：父元素设置了display:flex
+Flex项目：Flex容器内的子元素
+
+FLex容器属性flex-direction || flex-wrap || flex-flow || just">
+<meta property="og:updated_time" content="2017-03-26T03:07:35.209Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Flexbox 属性">
+<meta name="twitter:description" content="Flexbox 属性FLexbox 是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。开始使用给父元素设置一个　display:flex
+
+FLex 容器：父元素设置了display:flex
+Flex项目：Flex容器内的子元素
+
+FLex容器属性flex-direction || flex-wrap || flex-flow || just">
+  
+    <link rel="alternate" href="/atom.xml" title="强子" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">强子</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">做一个开心幸福的人</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Flex" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/26/Flex/" class="article-date">
+  <time datetime="2017-01-26T03:05:12.000Z" itemprop="datePublished">2017-01-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Flexbox 属性
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Flexbox-属性"><a href="#Flexbox-属性" class="headerlink" title="Flexbox 属性"></a>Flexbox 属性</h2><h3 id="FLexbox-是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。"><a href="#FLexbox-是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。" class="headerlink" title="FLexbox 是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。"></a>FLexbox 是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。</h3><h3 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h3><p>给父元素设置一个　<code>display:flex</code></p>
+<ul>
+<li>FLex 容器：父元素设置了<code>display:flex</code></li>
+<li>Flex项目：Flex容器内的子元素</li>
+</ul>
+<h3 id="FLex容器属性"><a href="#FLex容器属性" class="headerlink" title="FLex容器属性"></a>FLex容器属性</h3><p><code>flex-direction || flex-wrap || flex-flow || justify-content || align-items || align-content</code></p>
+<ol>
+<li><code>flex-direction: row || column || row-reverse || column-reverse;</code><ol>
+<li>分别是主轴向左、主轴向右、侧轴向下、侧轴向</li>
+</ol>
+</li>
+<li><code>flex-wrap: wrap || nowrap || wrap-reverse;</code><ol>
+<li>这个属性分别是表示子元素行数，第一个属性是默认属性，超过宽带自动换行，第二个属性是不换行，子元素会宽度变小，第三个属性跟第一个一样，反序。</li>
+</ol>
+</li>
+<li><code>flex-flow: row wrap;</code> 是<code>flex-direction</code>和<code>flex-wrap</code>速记属性，就是跟上面一、二一样。</li>
+<li><code>justify-content: flex-start || flex-end || center || space-between || space-around</code>与<code>text-align</code>类似。<ol>
+<li>分别是左对齐、右对齐、居中对齐、两端对齐，最后一个元素让每个Flex项目具有相同的空间。</li>
+</ol>
+</li>
+<li><code>align-items: flex-start || flex-end || center || stretch || baseline</code>类似<code>justify-content</code>属性，只不过是侧轴对齐。<ol>
+<li>该元素默认值是<code>stretch</code>，Flex项目跟Flex容器高度一致；<code>flex-start</code>让Flex项目顶部对齐；<code>flex-end</code>让Flex项目底部对齐；<code>center</code>让Flex项目上下高度居中对齐就是主轴对齐；<code>baseline</code>让Flex项目沿着他们自己基线对齐。</li>
+</ol>
+</li>
+</ol>
+<h3 id="FLex项目属性"><a href="#FLex项目属性" class="headerlink" title="FLex项目属性"></a>FLex项目属性</h3><p><code>order || flex-grow || flex-shrink || flex-basis</code></p>
+<ol>
+<li><code>order:1</code>(设置一个比零更大的值)<ol>
+<li>它通过改变数值大小，才判断权重，数值的大的靠前面，当数值相同时，谁的html代码在前面，它就在前面。</li>
+</ol>
+</li>
+<li><code>flex-grow</code>以及<code>flex-shrink</code>它们可以接受0或者更大的数值，默认情况<code>flex-grow:0</code>当他的值变成1的时候，那么他的宽度会自动边大填充至Flex容器宽度；<code>flex-shrink:1</code>是默认值，假设有两个Flex项目宽度总和为500，大于Flex容器400时候，值为1的时候，Flex项目不会会变成总宽度400，不会超过Flex容器，如果设置为0的是，此时就会超过了Flex容器的宽度。</li>
+<li><code>flex-basis:auto</code>是其默认值，它可以取一切width属性的任何值，跟width属性差不多一样，设置一个FLex项目的宽度。</li>
+<li>Flex速记:<code>flex</code>是<code>flex-grow、flex-shrink</code>和<code>flex-basis</code></li>
+</ol>
+<h3 id="其他属性"><a href="#其他属性" class="headerlink" title="其他属性"></a>其他属性</h3><ol>
+<li><code>align-self：auto ||  flex-startc || flex|| end || center || baseline || stretch</code> 。 <code>flex-end</code>使得该元素搞进最下面，<code>center</code>会使得元素垂直居中；<code>stertc</code>会让该元素垂直拉伸铺满整个侧抽；<code>baseline</code>将该元素沿着基线对齐，和<code>flex-start</code>看起来一样的，<code>auto</code>是将该项目设置为父元素的<code>align-items</code>值。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/26/Flex/" data-id="cj0q4p41q0002d8w80cqpq3k5" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flex/">Flex</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css布局/">css布局</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/26/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/10/javascript简单排序算法-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">javascript简单排序算法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flex/">Flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css布局/">css布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/七牛/">七牛</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/两列布局/">两列布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/百度/">百度</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/css布局/" style="font-size: 10px;">css布局</a> <a href="/tags/七牛/" style="font-size: 10px;">七牛</a> <a href="/tags/两列布局/" style="font-size: 10px;">两列布局</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/百度/" style="font-size: 10px;">百度</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/26/Flex/">Flexbox 属性</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/javascript简单排序算法-1/">javascript简单排序算法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/08/两列宽度自适应/">两列宽度自适应</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/03/关于这个网站的来历/">关于这个网站的来历</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 小强<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

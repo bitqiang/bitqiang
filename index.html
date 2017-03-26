@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>强子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="强子">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="强子">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="强子">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="强子" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -33,8 +33,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">强子</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">做一个开心幸福的人</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -96,7 +100,362 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/26/hello-world/" data-id="cj0q49rsh0000ugw8ty27ocau" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/03/26/hello-world/" data-id="cj0q4p41k0000d8w84sk753tl" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Flex" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/26/Flex/" class="article-date">
+  <time datetime="2017-01-26T03:05:12.000Z" itemprop="datePublished">2017-01-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/26/Flex/">Flexbox 属性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Flexbox-属性"><a href="#Flexbox-属性" class="headerlink" title="Flexbox 属性"></a>Flexbox 属性</h2><h3 id="FLexbox-是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。"><a href="#FLexbox-是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。" class="headerlink" title="FLexbox 是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。"></a>FLexbox 是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。</h3><h3 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h3><p>给父元素设置一个　<code>display:flex</code></p>
+<ul>
+<li>FLex 容器：父元素设置了<code>display:flex</code></li>
+<li>Flex项目：Flex容器内的子元素</li>
+</ul>
+<h3 id="FLex容器属性"><a href="#FLex容器属性" class="headerlink" title="FLex容器属性"></a>FLex容器属性</h3><p><code>flex-direction || flex-wrap || flex-flow || justify-content || align-items || align-content</code></p>
+<ol>
+<li><code>flex-direction: row || column || row-reverse || column-reverse;</code><ol>
+<li>分别是主轴向左、主轴向右、侧轴向下、侧轴向</li>
+</ol>
+</li>
+<li><code>flex-wrap: wrap || nowrap || wrap-reverse;</code><ol>
+<li>这个属性分别是表示子元素行数，第一个属性是默认属性，超过宽带自动换行，第二个属性是不换行，子元素会宽度变小，第三个属性跟第一个一样，反序。</li>
+</ol>
+</li>
+<li><code>flex-flow: row wrap;</code> 是<code>flex-direction</code>和<code>flex-wrap</code>速记属性，就是跟上面一、二一样。</li>
+<li><code>justify-content: flex-start || flex-end || center || space-between || space-around</code>与<code>text-align</code>类似。<ol>
+<li>分别是左对齐、右对齐、居中对齐、两端对齐，最后一个元素让每个Flex项目具有相同的空间。</li>
+</ol>
+</li>
+<li><code>align-items: flex-start || flex-end || center || stretch || baseline</code>类似<code>justify-content</code>属性，只不过是侧轴对齐。<ol>
+<li>该元素默认值是<code>stretch</code>，Flex项目跟Flex容器高度一致；<code>flex-start</code>让Flex项目顶部对齐；<code>flex-end</code>让Flex项目底部对齐；<code>center</code>让Flex项目上下高度居中对齐就是主轴对齐；<code>baseline</code>让Flex项目沿着他们自己基线对齐。</li>
+</ol>
+</li>
+</ol>
+<h3 id="FLex项目属性"><a href="#FLex项目属性" class="headerlink" title="FLex项目属性"></a>FLex项目属性</h3><p><code>order || flex-grow || flex-shrink || flex-basis</code></p>
+<ol>
+<li><code>order:1</code>(设置一个比零更大的值)<ol>
+<li>它通过改变数值大小，才判断权重，数值的大的靠前面，当数值相同时，谁的html代码在前面，它就在前面。</li>
+</ol>
+</li>
+<li><code>flex-grow</code>以及<code>flex-shrink</code>它们可以接受0或者更大的数值，默认情况<code>flex-grow:0</code>当他的值变成1的时候，那么他的宽度会自动边大填充至Flex容器宽度；<code>flex-shrink:1</code>是默认值，假设有两个Flex项目宽度总和为500，大于Flex容器400时候，值为1的时候，Flex项目不会会变成总宽度400，不会超过Flex容器，如果设置为0的是，此时就会超过了Flex容器的宽度。</li>
+<li><code>flex-basis:auto</code>是其默认值，它可以取一切width属性的任何值，跟width属性差不多一样，设置一个FLex项目的宽度。</li>
+<li>Flex速记:<code>flex</code>是<code>flex-grow、flex-shrink</code>和<code>flex-basis</code></li>
+</ol>
+<h3 id="其他属性"><a href="#其他属性" class="headerlink" title="其他属性"></a>其他属性</h3><ol>
+<li><code>align-self：auto ||  flex-startc || flex|| end || center || baseline || stretch</code> 。 <code>flex-end</code>使得该元素搞进最下面，<code>center</code>会使得元素垂直居中；<code>stertc</code>会让该元素垂直拉伸铺满整个侧抽；<code>baseline</code>将该元素沿着基线对齐，和<code>flex-start</code>看起来一样的，<code>auto</code>是将该项目设置为父元素的<code>align-items</code>值。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/26/Flex/" data-id="cj0q4p41q0002d8w80cqpq3k5" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flex/">Flex</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css布局/">css布局</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javascript简单排序算法-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/10/javascript简单排序算法-1/" class="article-date">
+  <time datetime="2016-07-10T08:52:36.000Z" itemprop="datePublished">2016-07-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/10/javascript简单排序算法-1/">javascript简单排序算法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JavaScript常用算法"><a href="#JavaScript常用算法" class="headerlink" title="JavaScript常用算法"></a>JavaScript常用算法</h2><p>在参加百度前端课程的时候，遇到一些需要算法的小例子，就顺便边学变做了。</p>
+<p>推荐一个<a href="http://www.webhek.com/misc/comparison-sort" target="_blank" rel="external">用HTML5实现的各种排序算法的动画比较</a>。<br>里面会有各种算法排序的可视化过程。</p>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p><a href="http://7xsle4.com1.z0.glb.clouddn.com/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html" target="_blank" rel="external">demo</a>   <a href="https://github.com/bitqiang/JavaScript-Exercise/blob/master/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.html" target="_blank" rel="external">源码</a><br>时间复杂度： O(n2)</p>
+<p>冒泡排序算法的运作如下：（从后往前）</p>
+<ol>
+<li>比较相邻的元素。如果第一个比第二个大，就交换他们两个。</li>
+<li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。</li>
+<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
+<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">maopao</span>(<span class="params">arra</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> temp;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arra.length;i++)&#123; <span class="comment">//比较多少趟，从第一趟开始</span></div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;arra.length-i<span class="number">-1</span>;j++)&#123; <span class="comment">//每一趟比较多少次数</span></div><div class="line"></div><div class="line">    <span class="keyword">if</span>(arra[j]&gt;arra[j+<span class="number">1</span>])&#123;   <span class="comment">//比较数组里面第j个和第j+1个，如果第j个大于第j+1个则交换位置。</span></div><div class="line">                temp=arra[j];</div><div class="line">                arra[j]=arra[j+<span class="number">1</span>];</div><div class="line">                arra[j+<span class="number">1</span>]=temp;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> arra;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">8</span>,<span class="number">12</span>,<span class="number">3</span>,<span class="number">54</span>,<span class="number">66</span>,<span class="number">78</span>]</div><div class="line"><span class="keyword">var</span> s = maopao(arr);</div><div class="line"><span class="built_in">console</span>.log(s);</div><div class="line"><span class="string">`</span></div></pre></td></tr></table></figure>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p><a href="http://7xsle4.com1.z0.glb.clouddn.com/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html" target="_blank" rel="external">demo</a> <a href="https://github.com/bitqiang/JavaScript-Exercise/blob/master/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.html" target="_blank" rel="external">源码</a></p>
+<p>时间复杂度： O(n*n)</p>
+<h4 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h4><p>直接从数组中找到最小的一个放到第一个位置，然后从剩下找到最小的数字放到第二个位置，依次循环，就可以排序完成了。可以看出来，选择排序的就是固定位置。</p>
+<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><ol>
+<li>选择排序的交换操作介于0和（n-1）之间；比较操作为你（n-1)/2之间；赋值操作介于0到3（n-1）之间。</li>
+<li>交换次数比冒泡排序较少，由于交换所需CPU时间比比较所需的CPU时间多， {\displaystyle n} 值较小时，选择排序比冒泡排序快。</li>
+<li>原地操作几乎是选择排序的唯一优点，当方度（space complexity）要求较高时，可以考虑选择排序；实际适用的场合非常罕见。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectionSort</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> min;    <span class="comment">//定义一个最小项</span></div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array.length; i++)&#123;</div><div class="line">        min = array[i];   <span class="comment">//假设最小项是第一项</span></div><div class="line">        <span class="keyword">var</span> k = i;             <span class="comment">//记录最小项的位置</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt; array.length; j++)&#123;</div><div class="line">            <span class="keyword">if</span>(min &gt; array[j])&#123;   <span class="comment">//若min &gt; array[j]，重新记录最小项的位置</span></div><div class="line">                min = arr[j];</div><div class="line">                k = j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        array[k] = array[i];</div><div class="line">        array[i] = min;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> array;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p><a href="http://7xsle4.com1.z0.glb.clouddn.com/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html" target="_blank" rel="external">demo</a> <a href="https://github.com/bitqiang/JavaScript-Exercise/blob/master/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html" target="_blank" rel="external">源码</a></p>
+<p>时间复杂度： O(n log n)</p>
+<h4 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h4><p>通过一次排序，将要排序的数据分割成两个部分，其中一部分的数据比另外一部分都要小，然后在按照此方法对这两部分数据分别快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(array.length &lt;= <span class="number">1</span>)&#123;</div><div class="line">        <span class="keyword">return</span> array;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> pivotIndex = <span class="built_in">Math</span>.floor(array.length / <span class="number">2</span>);</div><div class="line">    <span class="keyword">var</span> pivot = array.splice(pivotIndex, <span class="number">1</span>)[<span class="number">0</span>];</div><div class="line">    <span class="keyword">var</span> left =[];</div><div class="line">    <span class="keyword">var</span> right = [];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array.length; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(array[i] &lt; pivot)&#123;</div><div class="line">            left.push(array[i]);</div><div class="line">        &#125;<span class="keyword">else</span> &#123;</div><div class="line">            right.push(array[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> quickSort(left).concat([pivot], quickSort(right));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p><a href="http://7xsle4.com1.z0.glb.clouddn.com/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html" target="_blank" rel="external">demo</a> <a href="https://github.com/bitqiang/JavaScript-Exercise/blob/master/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.html" target="_blank" rel="external">源码</a></p>
+<p>时间复杂度： O(n^2)</p>
+<h4 id="基本思想-1"><a href="#基本思想-1" class="headerlink" title="基本思想"></a>基本思想</h4><p>每步将一个待排序的纪录，按其关键码值的大小插入前面已经排序的文件中适当位置上，直到全部插入完为止。<br>该排序算法有两个循环，外循环将数字挨个移动，内循环将外循环选中的元素及其他前面的数进行比较。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">insertion</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> temp , j;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; array.length; i++)&#123;</div><div class="line">            temp = array[i];                 <span class="comment">//定义temp为比较量</span></div><div class="line">            j = i;                           <span class="comment">//记录temp位置</span></div><div class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; array[j<span class="number">-1</span>] &gt; temp)&#123;   <span class="comment">//循环数量大于1，并且j-1项大于temp时，移动位置。</span></div><div class="line">                array[j] = array[j<span class="number">-1</span>];</div><div class="line">                j--;</div><div class="line">            &#125;</div><div class="line">            array[j] = temp;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> array;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p><a href="http://7xsle4.com1.z0.glb.clouddn.com/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html" target="_blank" rel="external">demo</a> <a href="https://github.com/bitqiang/JavaScript-Exercise/blob/master/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html" target="_blank" rel="external">源码</a></p>
+<p>时间复杂度： (n log n)</p>
+<h4 id="基本思想-2"><a href="#基本思想-2" class="headerlink" title="基本思想"></a>基本思想</h4><p>将两个已经排序的序列合成一个有序的操作，归并排序依赖于归并归并操作。</p>
+<h4 id="归并操作的过程如下："><a href="#归并操作的过程如下：" class="headerlink" title="归并操作的过程如下："></a>归并操作的过程如下：</h4><ol>
+<li>申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列</li>
+<li>设定两个指针，最初位置分别为两个已经排序序列的起始位置</li>
+<li>比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置</li>
+<li>重复步骤3直到某一指针达到序列尾</li>
+<li>将另一序列剩下的所有元素直接复制到合并序列尾</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">mergeSort</span>(<span class="params">arr,s,e</span>)</span>&#123;</div><div class="line">     <span class="keyword">if</span>(s&gt;e)&#123;   <span class="comment">//起始位置大于终点位置，返回空数组</span></div><div class="line">     <span class="keyword">return</span> [];</div><div class="line">     &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s==e)&#123;</div><div class="line">         <span class="keyword">return</span> [arr[s]]; <span class="comment">//起始位置等于终点位置，说明数组里只有一个数字，返回只含一个数字的数组</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">      <span class="keyword">var</span> mIndex = <span class="built_in">Math</span>.floor((s+e)/<span class="number">2</span>); <span class="comment">//中间位置的Index</span></div><div class="line">      <span class="keyword">var</span> arrL = mergeSort(arr,s,mIndex); <span class="comment">//将左边的数组排序</span></div><div class="line">      <span class="keyword">var</span> arrR = mergeSort(arr,mIndex+<span class="number">1</span>,e); <span class="comment">//将右边的数组排序</span></div><div class="line"></div><div class="line">      <span class="keyword">var</span> resultArr = []; <span class="comment">//结果数组</span></div><div class="line">      <span class="keyword">while</span>(arrL.length&gt;<span class="number">0</span> || arrR.length&gt;<span class="number">0</span>)&#123; <span class="comment">//当左右两个数组都不为空时</span></div><div class="line">      <span class="keyword">if</span>(arrL[<span class="number">0</span>]&lt;arrR[<span class="number">0</span>])&#123;</div><div class="line">            resultArr.push(arrL.shift());</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            resultArr.push(arrR.shift());</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(arrL.length==<span class="number">0</span>)&#123;  <span class="comment">//当左边的数组为空时</span></div><div class="line">        resultArr = resultArr.concat(arrR);</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(arrR.length==<span class="number">0</span>)&#123;</div><div class="line">            resultArr = resultArr.concat(arrL);</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> resultArr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/10/javascript简单排序算法-1/" data-id="cj0q4p4230007d8w8sm08kiwf" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-两列宽度自适应" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/08/两列宽度自适应/" class="article-date">
+  <time datetime="2016-04-08T12:20:00.000Z" itemprop="datePublished">2016-04-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/08/两列宽度自适应/">两列宽度自适应</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h4><p>两列宽度百分比，宽度自适应布局。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.left&#123;</div><div class="line">    width: 20%;</div><div class="line">    float: left;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">    width: 80%;</div><div class="line">    float: right;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h4><p>一侧固定，另一侧自适应。<br>右边宽度固定，左边自适应。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.left</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">70%</span>;</div><div class="line">    <span class="attribute">float</span>: left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.right</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">float</span>: right;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样当（min-wight） &lt; （.right + .left ），.right会自动换到下一行。<br>所以我们应该采用这样的：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.left</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(100% - 200px);</div><div class="line">    <span class="attribute">float</span>: left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.right</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">float</span>: right;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h4><p>左侧固定，右侧自适应。<br>参考 <a href="http://www.cnblogs.com/jununx/p/3336553.html" target="_blank" rel="external">小七的博客</a> 。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/08/两列宽度自适应/" data-id="cj0q4p41v0004d8w8fn4vjq63" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/两列布局/">两列布局</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-关于这个网站的来历" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/03/关于这个网站的来历/" class="article-date">
+  <time datetime="2016-04-03T07:06:00.000Z" itemprop="datePublished">2016-04-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/生活/">生活</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/03/关于这个网站的来历/">关于这个网站的来历</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>很早之前就想要自己建一个自己的网站，因为种种原因，一直没有一个属于自己的网站。之前有尝试使用过WordPress，但是觉得那个并不是很好，之前只是因为备案弄了一下下，就没有维护了，最近才知道的Hexo，看见一个前端的朋友在使用他，刚刚开他的网站的时候，感觉速度很慢，体验一点都不好，然后又看见<a href="http://blog.aidchou.com/" target="_blank" rel="external">江江</a>也使用了他，然后才尝试去搭了一下，过程只有自己能体会。<br>对git也不是很熟悉的我，走了不少弯路，一直没有成功，之前使用的是这个教程<a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a>   直到看见了这个教程<a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external"> 史上最详细的Hexo博客搭建图文教程</a>，具体踩了什么坑，也不详细说了，只是知道了，不要在当前目录使用 git add，git init 等指令，这个上传上去的，github并不能打开成为网页，只是会每次报错，<img src="http://7xsjto.com2.z0.glb.clouddn.com/github%E5%A4%B1%E8%B4%A5%E9%82%AE%E4%BB%B6.jpg" alt="报错的邮件">因为比较蠢，所以比较坑。<br>再说说图床的问题，如果以后要在文章里面加图片，所有图片都要上传到github感觉，300应该是不够用的，也跟朋友一起选择了七牛的图床。附上邀请链接，反正都要用，就顺便使用我的<a href="https://portal.qiniu.com/signup?code=3lpisedtoocpe" target="_blank" rel="external">邀请</a> <a href="https://portal.qiniu.com/signup?code=3lpisedtoocpe" target="_blank" rel="external">https://portal.qiniu.com/signup?code=3lpisedtoocpe</a> 咯，我也是使用的我朋友的邀请链接，在这里谢谢啦。<br>七牛的使用也很简单，但是可能是搭博客的时候变傻了，明明是图床，可是我找了好久才找到他上传的地方和链接，下面来一点七牛图床的使用说明吧。<br>一、首先是注册<img src="http://7xsjto.com2.z0.glb.clouddn.com/%E4%B8%83%E7%89%9B%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2.jpg" alt=""></p>
+<p>二、进入开发者平台，默认好像也是进入这个页面<br><img src="http://7xsjto.com2.z0.glb.clouddn.com/%E6%B7%BB%E5%8A%A0%E8%B5%84%E6%BA%90.png" alt=""></p>
+<p>三、然后是内容管理<br><img src="http://7xsjto.com2.z0.glb.clouddn.com/%E4%B8%83%E7%89%9B%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86.png" alt=""></p>
+<p>四、接下来是上传图片。</p>
+<p><img src="http://7xsjto.com2.z0.glb.clouddn.com/%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87.png" alt=""></p>
+<p><img src="http://7xsjto.com2.z0.glb.clouddn.com/%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%873.jpg" alt=""></p>
+<p>上次成功咯</p>
+<p><img src="http://7xsjto.com2.z0.glb.clouddn.com/%E4%B8%8A%E4%BC%A0%E6%88%90%E5%8A%9F%E5%90%8E%E5%85%B3%E9%97%AD5.png" alt=""></p>
+<p>五、接下里的复制外链。</p>
+<p>这一种是直接显示外链很简单。<img src="http://7xsjto.com2.z0.glb.clouddn.com/%E5%A4%8D%E5%88%B6%E5%A4%96%E9%93%BE3.png" alt=""></p>
+<p>这一种是没有复制外链的选项，当然也是可以的。<br><img src="http://7xsjto.com2.z0.glb.clouddn.com/%E5%8F%B3%E9%94%AE%E5%A4%96%E9%93%BE.png" alt=""></p>
+<p>然后就成功啦，希望大家搭建博客能一次成功。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/03/关于这个网站的来历/" data-id="cj0q4p4290009d8w8twgmcuii" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/七牛/">七牛</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-百度前端技术学院2016春季班" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/02/百度前端技术学院2016春季班/" class="article-date">
+  <time datetime="2016-04-02T09:18:48.000Z" itemprop="datePublished">2016-04-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/02/百度前端技术学院2016春季班/">百度前端技术学院2016春季班</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="百度前端技术学院2016春季班"><a href="#百度前端技术学院2016春季班" class="headerlink" title="百度前端技术学院2016春季班"></a><a href="http://ife.baidu.com/static/warmup.html#modile.qq.com" target="_blank" rel="external">百度前端技术学院2016春季班</a></h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>好好完成每一个任务，理解代码。</p>
+<hr>
+<h4 id="第一阶段任务"><a href="#第一阶段任务" class="headerlink" title="第一阶段任务"></a>第一阶段任务</h4><blockquote>
+<p><a href="http://ife.baidu.com/task/detail?taskId=1" target="_blank" rel="external">任务一：零基础HTML编码</a> &emsp;<font color="#2eb120">已完成</font>  &emsp; <a href="http://7xsle4.com2.z0.glb.clouddn.com/1%E4%BB%BB%E5%8A%A1%E4%B8%80%20%E9%9B%B6%E5%9F%BA%E7%A1%80HTML%E7%BC%96%E7%A0%81.html" target="_blank" rel="external">demo</a> &emsp; <a href="https://github.com/bitqiang/ife/blob/master/ife2016/16-IFE-Spring-Task1/1%E4%BB%BB%E5%8A%A1%E4%B8%80%20%E9%9B%B6%E5%9F%BA%E7%A1%80HTML%E7%BC%96%E7%A0%81/index.html" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=2" target="_blank" rel="external">任务二：零基础HTML及CSS编码（一）</a>&emsp;<font color="#2eb120">已完成</font> &emsp; <a href="http://7xsle4.com2.z0.glb.clouddn.com/2%E4%BB%BB%E5%8A%A1%E4%BA%8C%E9%9B%B6%E5%9F%BA%E7%A1%80HTML%E5%8F%8ACSS%E7%BC%96%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%891.html" target="_blank" rel="external">dome</a>  &emsp; <a href="https://github.com/bitqiang/ife/tree/master/ife2016/16-IFE-Spring-Task1/2%E4%BB%BB%E5%8A%A1%E4%BA%8C%E9%9B%B6%E5%9F%BA%E7%A1%80HTML%E5%8F%8ACSS%E7%BC%96%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=3" target="_blank" rel="external">任务三：三栏式布局</a> &emsp;<font color="#2eb120">已完成</font>  &emsp; <a href="http://7xsle4.com2.z0.glb.clouddn.com/3%E4%BB%BB%E5%8A%A1%E4%B8%89%E4%B8%89%E6%A0%8F%E5%BC%8F%E5%B8%83%E5%B1%801.html" target="_blank" rel="external">demo</a> &emsp; <a href="https://github.com/bitqiang/ife/tree/master/ife2016/16-IFE-Spring-Task1/3%E4%BB%BB%E5%8A%A1%E4%B8%89%E4%B8%89%E6%A0%8F%E5%BC%8F%E5%B8%83%E5%B1%80" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=4" target="_blank" rel="external">任务四：定位和居中问题</a>&emsp;<font color="#2eb120">已完成</font>  &emsp; <a href="http://7xsle4.com2.z0.glb.clouddn.com/4%E4%BB%BB%E5%8A%A1%E5%9B%9B%20%E5%AE%9A%E4%BD%8D%E5%92%8C%E5%B1%85%E4%B8%AD%E9%97%AE%E9%A2%98.html" target="_blank" rel="external">demo</a> &emsp; <a href="https://github.com/bitqiang/ife/tree/master/ife2016/16-IFE-Spring-Task1/4%E4%BB%BB%E5%8A%A1%E5%9B%9B%20%E5%AE%9A%E4%BD%8D%E5%92%8C%E5%B1%85%E4%B8%AD%E9%97%AE%E9%A2%98" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=4" target="_blank" rel="external">任务五：零基础HTML及CSS编码（二）</a>&emsp;<font color="#2eb120">已完成</font> &emsp; <a href="http://7xsle4.com2.z0.glb.clouddn.com/5%E4%BB%BB%E5%8A%A1%E4%BA%94%E9%9B%B6%E5%9F%BA%E7%A1%80HTML%E5%8F%8ACSS%E7%BC%96%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89.html" target="_blank" rel="external">dome</a> &emsp; <a href="https://github.com/bitqiang/ife/tree/master/ife2016/16-IFE-Spring-Task1/5%E4%BB%BB%E5%8A%A1%E4%BA%94%E9%9B%B6%E5%9F%BA%E7%A1%80HTML%E5%8F%8ACSS%E7%BC%96%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=6" target="_blank" rel="external">任务六：通过HTML及CSS模拟报纸排版</a>&emsp;<font color="#2eb120">已完成</font> &emsp; <a href="http://7xsle4.com2.z0.glb.clouddn.com/6%E4%BB%BB%E5%8A%A1%E5%85%AD%E9%80%9A%E8%BF%87HTML%E5%8F%8ACSS%E6%A8%A1%E6%8B%9F%E6%8A%A5%E7%BA%B8%E6%8E%92%E7%89%88.html" target="_blank" rel="external">demp</a> &emsp; <a href="https://github.com/bitqiang/ife/tree/master/ife2016/16-IFE-Spring-Task1/6%E4%BB%BB%E5%8A%A1%E5%85%AD%E9%80%9A%E8%BF%87HTML%E5%8F%8ACSS%E6%A8%A1%E6%8B%9F%E6%8A%A5%E7%BA%B8%E6%8E%92%E7%89%88" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=7" target="_blank" rel="external">任务七：实现常见的技术产品官网的页面架构及样式布局</a>&emsp; <font color="#2eb120">已完成</font> &emsp; <a href="http://7xsle4.com1.z0.glb.clouddn.com/7%E5%AE%9E%E7%8E%B0%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8A%80%E6%9C%AF%E4%BA%A7%E5%93%81%E5%AE%98%E7%BD%91%E7%9A%84%E9%A1%B5%E9%9D%A2%E6%9E%B6%E6%9E%84%E5%8F%8A%E6%A0%B7%E5%BC%8F%E5%B8%83%E5%B1%80.html" target="_blank" rel="external">demo</a> &emsp; <a href="https://git.oschina.net/bitqiang2016/github/tree/9849eee77b382b57ac854512b964f0f1632a8f0f/ife/ife2016/16-IFE-Spring-Task1/7%E4%BB%BB%E5%8A%A1%E4%B8%83%E5%AE%9E%E7%8E%B0%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8A%80%E6%9C%AF%E4%BA%A7%E5%93%81%E5%AE%98%E7%BD%91%E7%9A%84%E9%A1%B5%E9%9D%A2%E6%9E%B6%E6%9E%84%E5%8F%8A%E6%A0%B7%E5%BC%8F%E5%B8%83%E5%B1%80" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=8" target="_blank" rel="external">任务八：响应式网格（栅格化）布局</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=9" target="_blank" rel="external">任务九：使用HTML/CSS实现一个复杂页面</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=10" target="_blank" rel="external">任务十：Flexbox 布局练习</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=11" target="_blank" rel="external">任务十一：移动Web页面布局实践</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=12" target="_blank" rel="external">任务十二：学习CSS 3的新特性</a>&emsp;<font color="#F92672">未完成</font></p>
+</blockquote>
+<hr>
+<h4 id="第二阶段任务"><a href="#第二阶段任务" class="headerlink" title="第二阶段任务"></a>第二阶段任务</h4><blockquote>
+<p><a href="http://ife.baidu.com/task/detail?taskId=13" target="_blank" rel="external">任务十三：零基础JavaScript编码（一）</a>&emsp;<font color="#2eb120">已完成</font>  &emsp; <a href="http://7xsle4.com2.z0.glb.clouddn.com/%E4%BB%BB%E5%8A%A1%E5%8D%81%E4%B8%89%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89.html" target="_blank" rel="external">demo</a> &emsp; <a href="https://github.com/bitqiang/ife/tree/master/ife2016/16-IFE-Spring-Task2/13%E4%BB%BB%E5%8A%A1%E5%8D%81%E4%B8%89%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=14" target="_blank" rel="external">任务十四：零基础JavaScript编码（二）</a>&emsp;<font color="#2eb120">已完成</font>  &emsp; <a href="http://7xsle4.com2.z0.glb.clouddn.com/%E4%BB%BB%E5%8A%A1%E5%8D%81%E5%9B%9B%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89.html" target="_blank" rel="external">demo</a> &emsp; <a href="https://github.com/bitqiang/ife/tree/master/ife2016/16-IFE-Spring-Task2/%E4%BB%BB%E5%8A%A1%E5%8D%81%E5%9B%9B%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=15" target="_blank" rel="external">任务十五：零基础JavaScript编码（三）</a>&emsp;<font color="#2eb120">已完成</font>  &emsp; <a href="http://7xsle4.com2.z0.glb.clouddn.com/%E4%BB%BB%E5%8A%A1%E5%8D%81%E4%BA%94%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%B8%89%EF%BC%89.html" target="_blank" rel="external">demo</a> &emsp; <a href="https://github.com/bitqiang/ife/tree/master/ife2016/16-IFE-Spring-Task2/%E4%BB%BB%E5%8A%A1%E5%8D%81%E4%BA%94%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%B8%89%EF%BC%89" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=16" target="_blank" rel="external">任务十六：零基础JavaScript编码（四）</a>&emsp;<font color="#2eb120">已完成</font>  &emsp; <a href="http://7xsle4.com2.z0.glb.clouddn.com/%E4%BB%BB%E5%8A%A1%E5%8D%81%E5%85%AD%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E5%9B%9B%EF%BC%89.html" target="_blank" rel="external">demo</a> &emsp; <a href="https://github.com/bitqiang/ife/tree/master/ife2016/16-IFE-Spring-Task2/%E4%BB%BB%E5%8A%A1%E5%8D%81%E5%85%AD%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E5%9B%9B%EF%BC%89" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=17" target="_blank" rel="external">任务十七：零基础JavaScript编码（五）</a>&emsp;<font color="#2eb120">已完成</font>  &emsp; <a href="http://7xsle4.com2.z0.glb.clouddn.com/%E4%BB%BB%E5%8A%A1%E5%8D%81%E4%B8%83%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%BA%94%EF%BC%89.html" target="_blank" rel="external">demo</a> &emsp; <a href="http://git.oschina.net/bitqiang2016/ife/tree/master/ife2016/16-IFE-Spring-Task2/%E4%BB%BB%E5%8A%A1%E5%8D%81%E4%B8%83%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%BA%94%EF%BC%89?dir=1&amp;filepath=ife2016%2F16-IFE-Spring-Task2%2F%E4%BB%BB%E5%8A%A1%E5%8D%81%E4%B8%83%EF%BC%9A%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%BA%94%EF%BC%89" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=18" target="_blank" rel="external">任务十八：基础JavaScript练习（一）</a>&emsp;<font color="#2eb120">已完成</font> &emsp;<a href="http://7xsle4.com1.z0.glb.clouddn.com/%E4%BB%BB%E5%8A%A1%E5%8D%81%E5%85%AB%EF%BC%9A%E5%9F%BA%E7%A1%80JavaScript%E7%BB%83%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89.html" target="_blank" rel="external">demo</a> &emsp;<a href="http://git.oschina.net/bitqiang2016/ife/tree/master/ife2016/16-IFE-Spring-Task2/%E4%BB%BB%E5%8A%A1%E5%8D%81%E5%85%AB%EF%BC%9A%E5%9F%BA%E7%A1%80JavaScript%E7%BB%83%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89?dir=1&amp;filepath=ife2016%2F16-IFE-Spring-Task2%2F%E4%BB%BB%E5%8A%A1%E5%8D%81%E5%85%AB%EF%BC%9A%E5%9F%BA%E7%A1%80JavaScript%E7%BB%83%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89&amp;oid=191774e91fffcd49f1f71aa86b571ef4137cde2a&amp;sha=c87befe5ba760798903a2c1268e7c94a7b3855c4" target="_blank" rel="external">源码</a><br><a href="http://ife.baidu.com/task/detail?taskId=19" target="_blank" rel="external">任务十九：基础JavaScript练习（二）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=20" target="_blank" rel="external">任务二十：基础JavaScript练习（三）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=21" target="_blank" rel="external">任务二十一：基础JavaScript练习（四）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=22" target="_blank" rel="external">任务二十二：JavaScript和树（一）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=23" target="_blank" rel="external">任务二十三：JavaScript和树（二）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=24" target="_blank" rel="external">任务二十四：JavaScript和树（三）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=25" target="_blank" rel="external">任务二十五：JavaScript和树（四）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=26" target="_blank" rel="external">任务二十六：行星与飞船（一）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=27" target="_blank" rel="external">任务二十七：行星与飞船（二）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=28" target="_blank" rel="external">任务二十八：行星与飞船（三）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=29" target="_blank" rel="external">任务二十九：表单（一）单个表单项的检验</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=30" target="_blank" rel="external">任务三十：表单（二）多个表单项的动态校验</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=31" target="_blank" rel="external">任务三十一：表单（三）联动</a>&emsp; <font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=32" target="_blank" rel="external">任务三十二：表单（四）实现表单自动生成工厂</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=33" target="_blank" rel="external">任务三十三：听指令的小方块（一）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=33" target="_blank" rel="external">任务三十四：听指令的小方块（二）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=35" target="_blank" rel="external">任务三十五：听指令的小方块（三）</a>&emsp;<font color="#F92672">未完成</font><br><a href="http://ife.baidu.com/task/detail?taskId=36" target="_blank" rel="external">任务三十六：听指令的小方块（四）</a>&emsp;<font color="#F92672">未完成</font></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/02/百度前端技术学院2016春季班/" data-id="cj0q4p42c000cd8w80ach0mod" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/百度/">百度</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-你好" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/02/你好/" class="article-date">
+  <time datetime="2016-04-02T04:06:18.000Z" itemprop="datePublished">2016-04-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/02/你好/">你好！</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>欢迎来访。</p>
+<p>请随意观看。</p>
+<p>谢谢。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/02/你好/" data-id="cj0q4p4280008d8w8kdepw8dv" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -112,18 +471,39 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flex/">Flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css布局/">css布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/七牛/">七牛</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/两列布局/">两列布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/百度/">百度</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/css布局/" style="font-size: 10px;">css布局</a> <a href="/tags/七牛/" style="font-size: 10px;">七牛</a> <a href="/tags/两列布局/" style="font-size: 10px;">两列布局</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/百度/" style="font-size: 10px;">百度</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
     </div>
   </div>
 
@@ -139,6 +519,22 @@
             <a href="/2017/03/26/hello-world/">Hello World</a>
           </li>
         
+          <li>
+            <a href="/2017/01/26/Flex/">Flexbox 属性</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/javascript简单排序算法-1/">javascript简单排序算法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/08/两列宽度自适应/">两列宽度自适应</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/03/关于这个网站的来历/">关于这个网站的来历</a>
+          </li>
+        
       </ul>
     </div>
   </div>
@@ -151,7 +547,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
+      &copy; 2017 小强<br>
       Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
