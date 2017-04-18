@@ -93,7 +93,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/26/Flex/index.html">
 <meta property="og:site_name" content="强子">
 <meta property="og:description" content="Flexbox 属性FLexbox 是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。">
-<meta property="og:updated_time" content="2017-03-26T04:12:24.788Z">
+<meta property="og:updated_time" content="2017-04-18T08:46:55.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flexbox 属性">
 <meta name="twitter:description" content="Flexbox 属性FLexbox 是一个布局方式，它可以灵活地分配元素和空间两者的方式，简单地说就是可以自动调整，计算元素在容器空间大小。">
@@ -421,16 +421,16 @@
 <h3 id="FLex容器属性"><a href="#FLex容器属性" class="headerlink" title="FLex容器属性"></a>FLex容器属性</h3><p><code>flex-direction || flex-wrap || flex-flow || justify-content || align-items || align-content</code></p>
 <ol>
 <li><code>flex-direction: row || column || row-reverse || column-reverse;</code><ol>
-<li>分别是主轴向左、主轴向右、侧轴向下、侧轴向</li>
+<li><strong>默认主轴向右</strong> ；四个属性分别代表水平向右，垂直向下，水平向左，垂直向上。</li>
 </ol>
 </li>
-<li><code>flex-wrap: wrap || nowrap || wrap-reverse;</code><ol>
-<li>这个属性分别是表示子元素行数，第一个属性是默认属性，超过宽带自动换行，第二个属性是不换行，子元素会宽度变小，第三个属性跟第一个一样，反序。</li>
+<li><code>flex-wrap: nowrap || wrap || wrap-reverse;</code><ol>
+<li><strong>默认不换行，单行显示</strong> 这个属性分别是表示子元素行数，第一个属性是默认属性，不会换行，第二个属性是多行显示，第三个属性跟第二个一样，反序。</li>
 </ol>
 </li>
-<li><code>flex-flow: row wrap;</code> 是<code>flex-direction</code>和<code>flex-wrap</code>速记属性，就是跟上面一、二一样。</li>
+<li><code>flex-flow: row wrap;</code> 是<code>flex-direction</code>和<code>flex-wrap</code>速记属性，就是跟上面一、二一样，<strong>默认值row nowrap</strong></li>
 <li><code>justify-content: flex-start || flex-end || center || space-between || space-around</code>与<code>text-align</code>类似。<ol>
-<li>分别是左对齐、右对齐、居中对齐、两端对齐，最后一个元素让每个Flex项目具有相同的空间。</li>
+<li><strong>默认值左对齐</strong>分别是左对齐、右对齐、居中对齐、两端对齐，最后一个元素让每个Flex项目具有相同的空间。</li>
 </ol>
 </li>
 <li><code>align-items: flex-start || flex-end || center || stretch || baseline</code>类似<code>justify-content</code>属性，只不过是侧轴对齐。<ol>
