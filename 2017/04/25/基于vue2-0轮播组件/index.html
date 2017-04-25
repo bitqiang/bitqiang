@@ -93,7 +93,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/25/基于vue2-0轮播组件/index.html">
 <meta property="og:site_name" content="强子">
 <meta property="og:description" content="近期在IMWeb学习了vue2.0，然后几个人组的一个小团队一起做了腾讯课堂的手机端，我负责了轮播图的实现，好久没写轮播，都要忘了，再记录一下当时的写法。">
-<meta property="og:updated_time" content="2017-04-25T06:58:34.673Z">
+<meta property="og:updated_time" content="2017-04-25T07:02:21.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于vue2.0轮播组件">
 <meta name="twitter:description" content="近期在IMWeb学习了vue2.0，然后几个人组的一个小团队一起做了腾讯课堂的手机端，我负责了轮播图的实现，好久没写轮播，都要忘了，再记录一下当时的写法。">
@@ -391,7 +391,7 @@
 
       
         <p>近期在IMWeb学习了vue2.0，然后几个人组的一个小团队一起做了腾讯课堂的手机端，我负责了轮播图的实现，好久没写轮播，都要忘了，再记录一下当时的写法。<br> <a id="more"></a></p>
-<p>先上团队完成<a href="http://bitqiang.win/demo/vue/imweb/index" target="_blank" rel="external">DEMO</a></p>
+<p>先上团队完成<a href="http://bitqiang.win/demo/vue/IMWeb/index.html" target="_blank" rel="external">DEMO</a></p>
 <h5 id="首先写html-css。"><a href="#首先写html-css。" class="headerlink" title="首先写html+css。"></a>首先写html+css。</h5><p>图片设置一个固定宽度，外层容器<code>container</code>设置一个宽度为  <strong>图片宽度 * 图片数量</strong> 设置为绝对定位，通过改变left来改变滚动图片，它的外层<code>banner</code>需要设置一下宽跟<strong>高</strong>，前面的都可以不设置高度，但是这里需要设置高度，要不然设置<code>overflow-x: hidden</code>会撑不起内容。</p>
 <h5 id="渲染图片"><a href="#渲染图片" class="headerlink" title="渲染图片"></a>渲染图片</h5><p>图片url放在一个数组里面listImg，通过<code>v-for</code>指令来渲染出全部图片。</p>
 <h5 id="点击小圆点切换图片"><a href="#点击小圆点切换图片" class="headerlink" title="点击小圆点切换图片"></a>点击小圆点切换图片</h5><p>这个时候需要给<code>span</code>添加一个click事件，获取span的index，通过index改变图片left值来切换图片。</p>
