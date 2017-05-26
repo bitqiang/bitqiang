@@ -382,37 +382,14 @@
 
       
         
-          
-            <p>最近写了一个社团六一项目，用到微信sdk，向后端请求签名的时候遇到一些问题。以及axios入门常见问题。</p>
-<ol>
-<li>首先我们先安装</li>
-</ol>
-<p><code>npm install axios</code></p>
-<ol>
-<li>使用方法一，在需要的vue组件里面import</li>
-</ol>
-<p><code>import axios from &#39;axios&#39;</code></p>
-<p>然后直接你需要的地方使用，生命周期或者方法里面直接使用吧</p>
-<p>get请求</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">axios.get(<span class="string">'/user?ID=12345'</span>)</div><div class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(error);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
-<p>post请求<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">axios.post(<span class="string">'/user'</span>, &#123;</div><div class="line">    <span class="attr">firstName</span>: <span class="string">'Fred'</span>,</div><div class="line">    <span class="attr">lastName</span>: <span class="string">'Flintstone'</span></div><div class="line">  &#125;)</div><div class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(error);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure></p>
-<p>如果跨域的话需要后端设置请求头<br><code>Access-Control-Allow-Origin: *</code></p>
-<p>axioa修改请求头,等配置可以参照文档里面的 Request Config<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">axios.post(<span class="string">'/user'</span>, &#123;</div><div class="line">    <span class="attr">firstName</span>: <span class="string">'Fred'</span>,</div><div class="line">    <span class="attr">lastName</span>: <span class="string">'Flintstone'</span></div><div class="line">  &#125;,&#123;<span class="attr">headers</span>: &#123; <span class="string">'Content-Type'</span>: <span class="string">'application/x-www-form-urlencoded'</span> &#125;&#125;)</div><div class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(error);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure></p>
-<ol>
-<li>使用方法二，在需要的vue组件里面import<br>在<code>main.js</code>添加修改原型链</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import axios from &apos;axios&apos;</div><div class="line">Vue.prototype.$http = axios</div></pre></td></tr></table></figure>
-<p>就可以在任意组件里面直接使用，不需要import了。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$http.get(<span class="string">'/user?ID=12345'</span>)</div><div class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(error);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
-<ol>
-<li>有时候使用axios会出现get请求可以，但是post请求的时候，会返回400错误。<br>这是由于发送请求的格式不对，一种方法是后端修改接受的数据。<br>另一种就是在前端修改请求数据的内容格式。<br>然后通过 <code>import Qs from &#39;qs&#39;</code></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">let dataTemp = &#123;</div><div class="line">   firstName: &apos;Fred&apos;,</div><div class="line">   lastName: &apos;Flintstone&apos;</div><div class="line">&#125;</div><div class="line">let data = Qs.stringify(dataTemp)</div><div class="line">axios.post(&apos;/user&apos;,data ,&#123;</div><div class="line">   headers: &#123; &apos;Content-Type&apos;: &apos;application/x-www-form-urlencoded&apos; &#125;&#125;)</div><div class="line">  .then(function (response) &#123;</div><div class="line">    console.log(response);</div><div class="line">  &#125;)</div><div class="line">  .catch(function (error) &#123;</div><div class="line">    console.log(error);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
-<p>这个时候后端就能正确接受请求并返回你需要的内容了。</p>
-<p><a href="https://github.com/mzabriskie/axios" target="_blank" rel="external">axios文档&amp;github</a> <br><br><a href="https://www.awesomes.cn/repo/mzabriskie/axios" target="_blank" rel="external">axios中文文档</a></p>
-<p>最后，前端还是需要了解一定的http，学会看控制台的Network。</p>
-
-          
+          <p>最近写了一个社团六一项目，用到微信sdk，向后端请求签名的时候遇到一些问题。以及axios入门常见问题。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/20/vue使用axios/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
