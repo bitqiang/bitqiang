@@ -295,6 +295,167 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/29/微信小程序之AES加密之EBC模式以及cookie使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小强">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="强子">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/29/微信小程序之AES加密之EBC模式以及cookie使用/" itemprop="url">
+                  微信小程序之AES加密之EBC模式以及cookie使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-29T22:17:58+08:00">
+                2017-05-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/05/29/微信小程序之AES加密之EBC模式以及cookie使用/" class="leancloud_visitors" data-flag-title="微信小程序之AES加密之EBC模式以及cookie使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>写微信小程序的时候遇见几个问题，使用CryptoJS导包的时候也踩到坑了，自己对require不太熟悉吧，然后就是调用接口的时候，需要保存一个cookie，但是微信小程序跟普通网页也不同，没有cooki这类东西….</p>
+<more>
+
+
+<h3 id="微信小程序之cES加密之EBC模式"><a href="#微信小程序之cES加密之EBC模式" class="headerlink" title="微信小程序之cES加密之EBC模式"></a>微信小程序之cES加密之EBC模式</h3><ol>
+<li><a href="https://github.com/brix/crypto-js" target="_blank" rel="external">下载加密解密包</a><br>模块使用也可以参照 <a href="https://github.com/sytelus/CryptoJS" target="_blank" rel="external">https://github.com/sytelus/CryptoJS</a><br>下载所需的 文件就可以了<br>这次是使用AES跟ECB。所有只下了这两个文件。</li>
+<li>修改AES.js文件<br>最后一行添加 </li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;    <span class="comment">//导出模块</span></div><div class="line">  CryptoJS: CryptoJS  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>修改ECB.js,修改文件如下</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ECB = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;                  <span class="comment">// 重命名函数</span></div><div class="line">    <span class="keyword">let</span> fun_aes = <span class="built_in">require</span>(<span class="string">'./aes.js'</span>)   <span class="comment">//导入aes包，否则会报错。</span></div><div class="line">    <span class="keyword">var</span> ECB = fun_aes.CryptoJS.lib.BlockCipherMode.extend();</div><div class="line"></div><div class="line">    ECB.Encryptor = ECB.extend(&#123;</div><div class="line">        <span class="attr">processBlock</span>: <span class="function"><span class="keyword">function</span> (<span class="params">words, offset</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>._cipher.encryptBlock(words, offset);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    ECB.Decryptor = ECB.extend(&#123;</div><div class="line">        <span class="attr">processBlock</span>: <span class="function"><span class="keyword">function</span> (<span class="params">words, offset</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>._cipher.decryptBlock(words, offset);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> ECB;</div><div class="line">&#125;());</div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">ECB</span>: ECB <span class="comment">// 导出函数</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>封装一个函数需要的地方直接使用 public</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> key_ = fd75367db3f30ba863             <span class="comment">//定义你的key </span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">aes</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> aes = <span class="built_in">require</span>(<span class="string">'../utils/cryptojs/AES.js'</span>)</div><div class="line">  <span class="keyword">let</span> ecb = <span class="built_in">require</span>(<span class="string">'../utils/cryptojs/ECB.js'</span>)</div><div class="line">  <span class="keyword">var</span> key = aes.CryptoJS.enc.Utf8.parse(key_.key)</div><div class="line">  <span class="keyword">var</span> encrypted = aes.CryptoJS.AES.encrypt(data, key, &#123;</div><div class="line">    <span class="attr">mode</span>: ecb.ECB,                         <span class="comment">//使用ecb里面的ECB方法 </span></div><div class="line">    padding: aes.CryptoJS.pad.Pkcs7</div><div class="line">  &#125;);</div><div class="line">  encrypted = encrypted.toString()</div><div class="line">  <span class="keyword">return</span> encrypted</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  AES</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>在xxx.js使用。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> AES = <span class="built_in">require</span>(<span class="string">'../../utils/public.js'</span>).AES</div><div class="line"><span class="keyword">let</span> temp = aaaaaa;</div><div class="line"><span class="keyword">let</span> encryption = AES(temp);</div></pre></td></tr></table></figure>
+<p>以上就是使用了crypto-js加密的列子。<br><a href="https://github.com/bitqiang/wx-book" target="_blank" rel="external">代码链接</a></p>
+<h3 id="微信小程序之cooki进行验证"><a href="#微信小程序之cooki进行验证" class="headerlink" title="微信小程序之cooki进行验证"></a>微信小程序之cooki进行验证</h3><ol>
+<li>使用前，先介绍一下cookie是什么，因为http协议是无状态的，服务端需要记录用户状态的时候，大概是比如一个购物车的场景，服务端需要知道是哪个用户执行了下单这个状态，所以需要保存下这个状态，，就需要Session这个机制，所以每次请求的时候，http请求的时候自动带了cookie信息发送到服务端。</li>
+<li>seesion是保存在服务端的，cookie是保存在客户端的，seesion运行需要一个seesion id，seesion id保存在cookie里面，当然cookie是有一个时间限制的，过期的cookie是不可用的。</li>
+<li>思路是这样了，http请求的时候，会自动带着cookie去请求数据，然后我们就在请求的时候，保存下cookie，然后发送的时候在header加入cookie，这样请求就也发送了cookie。达到验证的效果。</li>
+<li>具体例子。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"> wx.request(&#123;</div><div class="line">     <span class="attr">url</span>: <span class="string">'url'</span>,</div><div class="line">     <span class="attr">data</span>: &#123;</div><div class="line">        <span class="attr">data</span>: data</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</div><div class="line">    wx.setStorageSync(<span class="string">'cookie'</span>,res.header[<span class="string">'Set-Cookie'</span>])   <span class="comment">// 保存cookie</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"> wx.request(&#123;</div><div class="line">     <span class="attr">url</span>: <span class="string">'url'</span>,</div><div class="line">     <span class="attr">data</span>: &#123;</div><div class="line">        <span class="attr">data</span>: data</div><div class="line">  &#125;,</div><div class="line">     <span class="attr">header</span>: &#123;</div><div class="line">        <span class="attr">cookie</span>: wx.getStorageSync(<span class="string">'cookie'</span>)     <span class="comment">//取出cookie</span></div><div class="line">  &#125;,</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>以上就是最近写小程序遇到的一点问题，如有不对，烦请指出。</p>
+</more>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/20/vue使用axios/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1685,7 +1846,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1707,7 +1868,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
