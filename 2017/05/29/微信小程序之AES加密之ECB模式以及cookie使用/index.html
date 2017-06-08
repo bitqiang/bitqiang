@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="-微信小程序 -cookie -AES -EBC -cryptojs," />
+  <meta name="keywords" content="-微信小程序 -cookie -AES -ECB -cryptojs," />
 
 
 
@@ -89,13 +89,13 @@
 
 <meta name="description" content="写微信小程序的时候遇见几个问题，使用CryptoJS导包的时候也踩到坑了，自己对require不太熟悉吧，然后就是调用接口的时候，需要保存一个cookie，但是微信小程序跟普通网页也不同，没有cooki这类东西….">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信小程序之AES加密之EBC模式以及cookie使用">
-<meta property="og:url" content="http://yoursite.com/2017/05/29/微信小程序之AES加密之EBC模式以及cookie使用/index.html">
+<meta property="og:title" content="微信小程序之AES加密之ECB模式以及cookie使用">
+<meta property="og:url" content="http://yoursite.com/2017/05/29/微信小程序之AES加密之ECB模式以及cookie使用/index.html">
 <meta property="og:site_name" content="强子">
 <meta property="og:description" content="写微信小程序的时候遇见几个问题，使用CryptoJS导包的时候也踩到坑了，自己对require不太熟悉吧，然后就是调用接口的时候，需要保存一个cookie，但是微信小程序跟普通网页也不同，没有cooki这类东西….">
-<meta property="og:updated_time" content="2017-05-29T14:27:06.559Z">
+<meta property="og:updated_time" content="2017-06-01T11:08:22.901Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信小程序之AES加密之EBC模式以及cookie使用">
+<meta name="twitter:title" content="微信小程序之AES加密之ECB模式以及cookie使用">
 <meta name="twitter:description" content="写微信小程序的时候遇见几个问题，使用CryptoJS导包的时候也踩到坑了，自己对require不太熟悉吧，然后就是调用接口的时候，需要保存一个cookie，但是微信小程序跟普通网页也不同，没有cooki这类东西….">
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/29/微信小程序之AES加密之EBC模式以及cookie使用/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/29/微信小程序之AES加密之ECB模式以及cookie使用/"/>
 
 
 
 
 
-  <title> 微信小程序之AES加密之EBC模式以及cookie使用 | 强子 </title>
+  <title> 微信小程序之AES加密之ECB模式以及cookie使用 | 强子 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/29/微信小程序之AES加密之EBC模式以及cookie使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/29/微信小程序之AES加密之ECB模式以及cookie使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小强">
@@ -318,7 +318,7 @@
             
             
               
-                微信小程序之AES加密之EBC模式以及cookie使用
+                微信小程序之AES加密之ECB模式以及cookie使用
               
             
           </h1>
@@ -352,7 +352,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/05/29/微信小程序之AES加密之EBC模式以及cookie使用/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/05/29/微信小程序之AES加密之ECB模式以及cookie使用/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -361,7 +361,7 @@
 
           
           
-             <span id="/2017/05/29/微信小程序之AES加密之EBC模式以及cookie使用/" class="leancloud_visitors" data-flag-title="微信小程序之AES加密之EBC模式以及cookie使用">
+             <span id="/2017/05/29/微信小程序之AES加密之ECB模式以及cookie使用/" class="leancloud_visitors" data-flag-title="微信小程序之AES加密之ECB模式以及cookie使用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -392,7 +392,7 @@
       
         <p>写微信小程序的时候遇见几个问题，使用CryptoJS导包的时候也踩到坑了，自己对require不太熟悉吧，然后就是调用接口的时候，需要保存一个cookie，但是微信小程序跟普通网页也不同，没有cooki这类东西….</p>
  <a id="more"></a>
-<h3 id="微信小程序之cES加密之EBC模式"><a href="#微信小程序之cES加密之EBC模式" class="headerlink" title="微信小程序之cES加密之EBC模式"></a>微信小程序之cES加密之EBC模式</h3><p>1.<a href="https://github.com/brix/crypto-js" target="_blank" rel="external">下载加密解密包</a><br>模块使用也可以参照 <a href="https://github.com/sytelus/CryptoJS" target="_blank" rel="external">https://github.com/sytelus/CryptoJS</a><br>下载所需的 文件就可以了<br>这次是使用AES跟ECB。所有只下了这两个文件。<br>2.修改AES.js文件<br>最后一行添加 </p>
+<h3 id="微信小程序之cES加密之ECB模式"><a href="#微信小程序之cES加密之ECB模式" class="headerlink" title="微信小程序之cES加密之ECB模式"></a>微信小程序之cES加密之ECB模式</h3><p>1.<a href="https://github.com/brix/crypto-js" target="_blank" rel="external">下载加密解密包</a><br>模块使用也可以参照 <a href="https://github.com/sytelus/CryptoJS" target="_blank" rel="external">https://github.com/sytelus/CryptoJS</a><br>下载所需的 文件就可以了<br>这次是使用AES跟ECB。所有只下了这两个文件。<br>2.修改AES.js文件<br>最后一行添加 </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;    <span class="comment">//导出模块</span></div><div class="line">  CryptoJS: CryptoJS  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>3.修改ECB.js,修改文件如下</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ECB = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;                  <span class="comment">// 重命名函数</span></div><div class="line">    <span class="keyword">let</span> fun_aes = <span class="built_in">require</span>(<span class="string">'./aes.js'</span>)   <span class="comment">//导入aes包，否则会报错。</span></div><div class="line">    <span class="keyword">var</span> ECB = fun_aes.CryptoJS.lib.BlockCipherMode.extend();</div><div class="line"></div><div class="line">    ECB.Encryptor = ECB.extend(&#123;</div><div class="line">        <span class="attr">processBlock</span>: <span class="function"><span class="keyword">function</span> (<span class="params">words, offset</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>._cipher.encryptBlock(words, offset);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    ECB.Decryptor = ECB.extend(&#123;</div><div class="line">        <span class="attr">processBlock</span>: <span class="function"><span class="keyword">function</span> (<span class="params">words, offset</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>._cipher.decryptBlock(words, offset);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> ECB;</div><div class="line">&#125;());</div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">ECB</span>: ECB <span class="comment">// 导出函数</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -459,7 +459,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/微信小程序-cookie-AES-EBC-cryptojs/" rel="tag"># -微信小程序 -cookie -AES -EBC -cryptojs</a>
+            <a href="/tags/微信小程序-cookie-AES-ECB-cryptojs/" rel="tag"># -微信小程序 -cookie -AES -ECB -cryptojs</a>
           
         </div>
       
@@ -659,7 +659,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#微信小程序之cES加密之EBC模式"><span class="nav-number">1.</span> <span class="nav-text">微信小程序之cES加密之EBC模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微信小程序之cooki进行验证"><span class="nav-number">2.</span> <span class="nav-text">微信小程序之cooki进行验证</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#微信小程序之cES加密之ECB模式"><span class="nav-number">1.</span> <span class="nav-text">微信小程序之cES加密之ECB模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微信小程序之cooki进行验证"><span class="nav-number">2.</span> <span class="nav-text">微信小程序之cooki进行验证</span></a></li></ol></div>
             
 
           </div>
